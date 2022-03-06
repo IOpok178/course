@@ -9,13 +9,20 @@ app = Flask(__name__)
 def index():
     # загружаем данные
     posts = load_data()
+    return render_template("index.html", posts=posts, book_count = 5)
+
+
+@app.route("/search/")
+def search_post():
+    text = request.args.get('s')
+    posts = search_posts(text=text)
     return render_template("index.html", posts=posts)
 
 
 @app.route("/search/")
-def search():
+def search_name():
     text = request.args.get('s')
-    posts = search_posts(text=text)
+    posts = search_name(text=text)
     return render_template("index.html", posts=posts)
 
 

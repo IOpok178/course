@@ -38,8 +38,7 @@ def load_comment(post_id):
     # загрузка комментариев
     with open("data/comments.json", encoding='utf8') as f:
         data = json.load(f)
-
-    comments = []
+        comments = []
 
     for comment in data:
         if comment['post_id'] == post_id:
