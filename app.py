@@ -23,7 +23,7 @@ def search_post_view():
 @app.route("/search_name/")
 def search_name_view():
     text = request.args.get('s')
-    posts = search_name(text=text)
+    posts = search_name(user_name=text)
     return render_template("index.html", posts=posts)
 
 
