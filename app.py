@@ -13,14 +13,14 @@ def index():
     return render_template("index.html", posts=posts, book_count=5)
 
 
-@app.route("/search/")
+@app.route("/search_post/")
 def search_post():
     text = request.args.get('s')
     posts = search_posts(text=text)
     return render_template("index.html", posts=posts)
 
 
-@app.route("/search/")
+@app.route("/search_name/")
 def search_name():
     text = request.args.get('s')
     posts = search_name(text=text)
