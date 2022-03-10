@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 
+import functions
 from functions import load_data, search_posts, search_name, load_comment, get_post
 
 app = Flask(__name__)
@@ -8,8 +9,8 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     # загружаем данные
-    posts = load_data()
-    return render_template("index.html", posts=posts, book_count = 5)
+    posts = functions.load_data()
+    return render_template("index.html", posts=posts, book_count=5)
 
 
 @app.route("/search/")

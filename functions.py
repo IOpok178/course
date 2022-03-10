@@ -12,7 +12,6 @@ def load_data():
 def search_posts(text):
     # поиск поста
     data = load_data()
-
     posts = []
 
     for post in data:
@@ -23,7 +22,7 @@ def search_posts(text):
 
 
 def search_name(user_name):
-    # поиск пользователя
+    # поиск поста пользователя
     data = load_data()
     name = []
 
