@@ -14,14 +14,14 @@ def index():
 
 
 @app.route("/search_post/")
-def search_post():
+def search_post_view():
     text = request.args.get('s')
     posts = search_posts(text=text)
     return render_template("index.html", posts=posts)
 
 
 @app.route("/search_name/")
-def search_name():
+def search_name_view():
     text = request.args.get('s')
     posts = search_name(text=text)
     return render_template("index.html", posts=posts)
