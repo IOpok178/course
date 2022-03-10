@@ -36,5 +36,6 @@ def post(uid):
 
     return render_template("post.html", post=post, comments=comments)
 
+
 if __name__ == '__main__':
     app.run()
